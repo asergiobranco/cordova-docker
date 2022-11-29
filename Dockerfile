@@ -29,3 +29,7 @@ RUN sdkmanager --install "platforms;android-33"
 RUN sdkmanager --install "ndk;r25b"
 
 RUN yes | sdkmanager --licenses
+
+ENV ANDROID_SDK_ROOT=/opt/android-sdk/
+
+ENV JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64/
