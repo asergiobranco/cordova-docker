@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim
 
-RUN apt-get update 
+RUN apt-get update
 
 RUN apt-get upgrade -y
 
@@ -29,6 +29,8 @@ RUN sdkmanager --install "platforms;android-33"
 RUN sdkmanager --install "ndk;r25b"
 
 RUN yes | sdkmanager --licenses
+
+RUN gradle init
 
 ENV ANDROID_SDK_ROOT=/opt/android-sdk/
 
